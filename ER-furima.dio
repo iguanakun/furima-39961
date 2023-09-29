@@ -49,7 +49,7 @@
                 <mxCell id="34" value="delivery_cost_id(integer, NOT NULL)" style="text;strokeColor=none;fillColor=default;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="26">
                     <mxGeometry y="146" width="240" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="ship_from_area_id(integer, NOT NULL)" style="text;strokeColor=none;fillColor=default;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="26">
+                <mxCell id="32" value="prefecture_id(integer, NOT NULL)" style="text;strokeColor=none;fillColor=default;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="26">
                     <mxGeometry y="176" width="240" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="28" value="delivery_days_id(integer, NOT NULL)" style="text;strokeColor=none;fillColor=default;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="26">
