@@ -82,3 +82,4 @@ end
 gem 'pry-rails'
 gem 'devise'
 gem 'gimei'
+gem 'active_hash'
