@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  VALID_PRICE_REGEX = /\A\d\z/
+  VALID_PRICE_REGEX = /\A\d+\z/
 
   belongs_to :user
   has_one_attached :image
