@@ -39,9 +39,9 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Condition can't be blank")
       end
       it 'deliveryCost_idが空だと登録できない' do
-        @item.deliveryCost_id = 1
+        @item.delivery_cost_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Deliverycost can't be blank")
+        expect(@item.errors.full_messages).to include("Delivery cost can't be blank")
       end
       it 'prefecture_idが空だと登録できない' do
         @item.prefecture_id = 1
@@ -49,9 +49,9 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Prefecture can't be blank")
       end
       it 'deliveryDayが空だと登録できない' do
-        @item.deliveryDay_id = 1
+        @item.delivery_day_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Deliveryday can't be blank")
+        expect(@item.errors.full_messages).to include("Delivery day can't be blank")
       end
       it 'priceが空だと登録できない' do
         @item.price = ''
