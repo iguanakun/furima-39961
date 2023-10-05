@@ -53,7 +53,8 @@ class ItemsController < ApplicationController
 
   def move_to_index
     item = Item.find(params[:id])
-    unless current_user.id == item.user.id
+    # 他ユーザの商品への処理、または売却済みの場合
+    if current_user.id != item.user.id || item.order.present?
       redirect_to root_path
     end
   end
