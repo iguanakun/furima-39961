@@ -6,6 +6,6 @@ FactoryBot.define do
     house_number { '1-1' }
     building_name { '東京ハイツ' }
     phone_number { Faker::Lorem.characters(number: 10, min_numeric: 10) }
-    token {"tok_abcdefghijk00000000000000000"}
+    token { 'tok_abcdefghijk00000000000000000' }
   end
 end
