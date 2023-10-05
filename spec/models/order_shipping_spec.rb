@@ -72,12 +72,12 @@ RSpec.describe OrderShipping, type: :model do
       it 'phone_numberが半角数字以外だと購入できないこと' do
         @order_shipping.phone_number = 'abcdefghij'
         @order_shipping.valid?
-        expect(@order_shipping.errors.full_messages).to include('Phone number is invalid. Input only number')
+        expect(@order_shipping.errors.full_messages).to include('Phone number is invalid. Enter in 10 to 11 digits')
       end
       it 'phone_numberにハイフンが含まれると購入できないこと' do
         @order_shipping.phone_number = '012-345-6789'
         @order_shipping.valid?
-        expect(@order_shipping.errors.full_messages).to include('Phone number is invalid. Input only number')
+        expect(@order_shipping.errors.full_messages).to include('Phone number is invalid. Enter in 10 to 11 digits')
       end
       it 'userが紐づいていなければ購入できないこと' do
         @order_shipping.user_id = nil
