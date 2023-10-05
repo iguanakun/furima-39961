@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_item, only: [:index, :create]
+  before_action :move_to_index
 
   def index
     @order_shipping = OrderShipping.new
@@ -7,7 +9,6 @@ class OrdersController < ApplicationController
   end
 
   def create
-    binding.pry
     @order_shipping = OrderShipping.new(order_params)
     if @order_shipping.valid?
       pay_item
@@ -38,5 +39,13 @@ class OrdersController < ApplicationController
       card: order_params[:token],
       currency: 'jpy'
     )
+  end
+
+  def move_to_index
+    item = Item.find(params[:item_id])
+    # 自身が商品を出品している、または売却済みの場合
+    if current_user.id == item.user.id || item.order.present?
+      redirect_to root_path
+    end
   end
 end
